@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-console.log("API KEY:", process.env.OPENAI_API_KEY);
+console.log("API KEY:", process.env.OPENROUTER_API_KEY);
 
 const express = require("express");
 const axios = require("axios");
@@ -134,7 +134,7 @@ app.post("/ask", async (req, res) => {
     },
     {
       headers: {
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "http://localhost",
         "X-Title": "Jarvis"
